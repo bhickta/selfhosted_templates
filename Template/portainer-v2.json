@@ -3725,7 +3725,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Whoogle",
+					"bind": "/srv/dev-disk-by-label-Files/Config/Whoogle",
 					"container": "/config"
 				}
 			]
