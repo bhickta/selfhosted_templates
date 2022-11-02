@@ -3725,7 +3725,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/srv/dev-disk-by-label-Files/Config/Whoogle",
+					"bind": "/portainer/Files/AppData/Config/Whoogle",
 					"container": "/config"
 				}
 			]
@@ -3969,56 +3969,6 @@
 					"container": "/config"
 				}
 			]
-		},
-		{
-			"type": 1,
-			"title": "Papermerge",
-			"name": "Papermerge",
-			"note": "Portainer App Templates by <a href='https://www.technorabilia.com' target='_blank'>Technorabilia</a> based on data provided by <a href='https://www.linuxserver.io' target='_blank'>LinuxServer.io</a>.</p><p>Don't forget to create the volume directories on the host file system.</p><p>mkdir -p /volume1/docker/papermerge/config<br>mkdir -p /volume1/docker/papermerge/data</p>",
-			"description": "[Papermerge](https://www.papermerge.com/) is an open source document management system (DMS) primarily designed for archiving and retrieving your digital documents. Instead of having piles of paper documents all over your desk, office or drawers - you can quickly scan them and configure your scanner to directly upload to Papermerge DMS.'",
-			"platform": "linux",
-			"logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/papermerge-icon.png",
-			"image": "linuxserver/papermerge:latest",
-			"env": [
-				{
-					"name": "PUID",
-					"label": "PUID",
-					"default": "1024",
-					"description": "for UserID"
-				},
-				{
-					"name": "PGID",
-					"label": "PGID",
-					"default": "100",
-					"description": "for GroupID"
-				},
-				{
-					"name": "TZ",
-					"label": "TZ",
-					"default": "Europe/Amsterdam",
-					"description": "Specify a timezone to use for example Europe/Amsterdam"
-				},
-				{
-					"name": "REDIS_URL",
-					"label": "REDIS_URL",
-					"default": "",
-					"description": "Specify an external redis instance to use. Can optionally include a port (`redis:6379`) and/or db (`redis/foo`). If left blank or not included, will use a built-in redis instance. If changed after initial setup will also require manual modification of /config/settings.py"
-				}
-			],
-			"ports": [
-				"8000:8000/tcp"
-			],
-			"volumes": [
-			{
-				"container": "/config",
-				"bind": "/volume1/docker/papermerge/config"
-			},
-			{
-				"container": "/data",
-				"bind": "/volume1/docker/papermerge/data"
-			}
-			],
-			"restart_policy": "unless-stopped"
 		},
 		{
 			"categories": [
